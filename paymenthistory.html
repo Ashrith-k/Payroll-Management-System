@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Banner Styling */
+        .banner-container {
+            font-size: 50px;
+            color: #0044cc;
+            text-align: center;
+            position: relative;
+        }
+        .banner-image {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Form Styling */
+        .form-container {
+            padding: 40px 200px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .w3-input {
+            margin-bottom: 16px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .w3-button {
+            padding: 10px;
+        }
+
+        /* Table Styling */
+        .history-container {
+            padding: 30px 200px;
+            margin-top: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="w3-display-container banner-container">
+        <img src="images/banner.jpeg" alt="Banner Image" class="banner-image">
+        <div class="banner-text">Payroll Management System</div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="w3-container form-container">
+        <h2 class="w3-center">View Payment History</h2>
+        <form class="w3-container" action="afterpayment.php" method="post">
+            <p>
+                <label for="id">Select ID to see payment history</label>
+                <input class="w3-input w3-light-grey" type="number" id="id" name="id" placeholder="Enter Employee ID" required>
+            </p>
+            <button type="submit" class="w3-button w3-green w3-round-xxlarge w3-hover-blue">Generate</button>
+        </form>
+    </div>
+
+    <!-- Payment History Table Section -->
+    <div class="w3-container history-container">
+        <h2 class="w3-center">Payment History</h2>
+        <!-- This table will be dynamically filled with payment data after form submission -->
+        <table class="w3-table w3-bordered">
+            <tr>
+                <th>Payment No</th>
+                <th>Employee ID</th>
+                <th>Payment Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            <!-- Example Rows - These should be generated dynamically with PHP after form submission -->
+            <tr>
+                <td>101</td>
+                <td>12345</td>
+                <td>2023-10-01</td>
+                <td>$3000</td>
+                <td>Paid</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>12345</td>
+                <td>2023-11-01</td>
+                <td>$3000</td>
+                <td>Paid</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

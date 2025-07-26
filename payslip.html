@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payslip</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .form-container {
+            padding: 50px 200px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .w3-input, .w3-select {
+            margin-bottom: 16px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .w3-button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container form-container">
+        <h2 class="w3-center">Generate Employee Payslip</h2>
+        <form class="w3-container" action="afterpayslip.php" method="post">
+            <p>
+                <label>Select Year</label>
+                <input class="w3-input w3-light-grey" type="number" name="year" placeholder="Enter year" required>
+            </p>
+            <p>
+                <label>Select Month</label>
+                <select class="w3-input w3-light-grey" name="month" required>
+                    <option value="" disabled selected>Select month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+            </p>
+            <button type="submit" class="w3-button w3-green w3-round-xxlarge w3-hover-blue">Generate</button>
+        </form>
+    </div>
+</body>
+</html>

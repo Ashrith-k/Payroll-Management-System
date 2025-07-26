@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Payment</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .form-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .form-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container form-container w3-card-4">
+        <div class="form-title">Set Payment for Employee</div>
+        <form class="w3-container" action="setpayment.php" method="post">
+            <p>
+                <label>Employee ID</label>
+                <input class="w3-input w3-light-grey" type="number" name="empid" required>
+            </p>
+            <p>
+                <label>Select Year</label>
+                <input class="w3-input w3-light-grey" type="number" name="year" required>
+            </p>
+            <p>
+                <label>Select Month</label>
+                <select class="w3-select w3-light-grey" name="month" required>
+                    <option value="" disabled selected>Choose month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+            </p>
+            <p>
+                <label>Absence (Days)</label>
+                <input class="w3-input w3-light-grey" type="number" name="absence" required>
+            </p>
+            <p>
+                <label>Overtime (Hours)</label>
+                <input class="w3-input w3-light-grey" type="number" name="overtime" required>
+            </p>
+            <p>
+                <label>Seasonal Bonus</label>
+                <input class="w3-input w3-light-grey" type="number" name="sbonus" required>
+            </p>
+            <p>
+                <label>Other Bonus</label>
+                <input class="w3-input w3-light-grey" type="number" name="obonus" required>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Submit Payment" class="form-submit">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

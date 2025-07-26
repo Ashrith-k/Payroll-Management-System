@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Salary</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .form-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .form-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container form-container w3-card-4">
+        <div class="form-title">Set Salary for Job Title</div>
+        <form class="w3-container" action="setsalary.php" method="post">
+            <p>
+                <label for="jobtitle">Designation</label>
+                <select class="w3-select w3-light-grey" name="jobtitle" required>
+                    <option value="" disabled selected>Choose a job title</option>
+                    <option value="executive">Executive</option>
+                    <option value="manager">Manager</option>
+                    <option value="director">Director</option>
+                    <option value="accountant">Accountant</option>
+                    <option value="chief">Chief</option>
+                </select>
+            </p>
+            <p>
+                <label for="salary">Salary</label>
+                <input class="w3-input w3-light-grey" type="number" name="salary" placeholder="Enter the salary amount" required>
+            </p>
+            <p>
+                <input type="submit" value="Set Salary" class="form-submit w3-button">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
